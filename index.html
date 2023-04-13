@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <div class="container">
-            <div class="input-container">
-                <input type="number" id="numberInput">
-                <button onclick="createDivs(event)">Create</button>
-            </div>
-            <div id="container" class="grid"></div>
+    <div class="container">
+        <div class="sliderbar">
+            <p>Current grid size: <span id="slider"></span></p>
+            <input type="range" min="2" max="100" value="4" class="slider" id="numberInput" onchange="createDivs()">
         </div>
-    </form>
+        <div id="container" class="grid"></div>
+    </div>
+
 </body>
 </html>
