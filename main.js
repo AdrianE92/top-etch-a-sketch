@@ -21,9 +21,7 @@ function createDivs(event){
         var div = document.createElement('div');
         div.classList.add('square');
         div.addEventListener('mouseover', (event) => { event.target.style.backgroundColor = 'black';});
-        div.innerHTML = i;
         container.appendChild(div);
-        console.log(i);
     }
 }
 
