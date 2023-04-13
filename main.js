@@ -23,6 +23,14 @@ function createDivs(event){
         div.addEventListener('mouseover', (event) => { event.target.style.backgroundColor = 'black';});
         container.appendChild(div);
     }
+    updateSliderValue();
+}
+
+function updateSliderValue(){
+    var output = document.getElementById("slider");
+    var slider = document.getElementById("numberInput");
+    output.innerHTML = slider.value + " x " + slider.value;
+    slider.oninput = function() {output.innerHTML = this.value;}
 }
 
 window.onload = function(){
